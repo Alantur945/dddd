@@ -1,0 +1,20 @@
+<!-- task3/templates/fourth_task/shop.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин</title>
+</head>
+<body>
+    <h1>Магазин</h1>
+    <ul>
+        {% for item in items.values %}
+            <li>
+                {{ item }}
+                <button>Купить</button>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Вернуться на главную страницу</a>
+</body>
+</html>

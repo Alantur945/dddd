@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+   <html lang="ru">
+   <head>
+       <meta charset="UTF-8">
+       <title>{{ block.super }}</title>
+   </head>
+   <body>
+       <ul>
+           <li><a href="{% url 'home' %}">Главная страница</a></li>
+           <li><a href="{% url 'shop' %}">Магазин</a></li>
+           <li><a href="{% url 'cart' %}">Корзина</a></li>
+       </ul>
+       <h1>{% block pagename %}{% endblock %}</h1>
+       <div>
+           {% block content %}{% endblock %}
+       </div>
+   </body>
+   </html>
