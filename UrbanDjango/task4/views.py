@@ -2,15 +2,15 @@ from django.shortcuts import render
 
 
 def main_page(request):
-    return render(request, 'fourth_task/main.html', {'pagename': 'Главная страница'})
+    return render(request, 'fourth_task/main.html')
 
 
 def shop_page(request):
-    items = {'item1': 'Носки', 'item2': 'Трусы', 'item3': 'Майка'}
-    return render(request, 'fourth_task/shop.html', {'pagename': 'Магазин', 'items': items})
+    items = {
+        'games': ['Atomic Heart', 'Cyberpunk 2077', 'The Witcher 3']
+    }
+    return render(request, 'fourth_task/shop.html', context=items)
 
 
 def cart_page(request):
-    return render(request, 'fourth_task/cart.html', {'pagename': 'Корзина'})
-
-
+    return render(request, 'fourth_task/cart.html')
